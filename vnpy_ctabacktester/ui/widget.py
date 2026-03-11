@@ -817,8 +817,8 @@ class BacktesterChart(pg.GraphicsLayoutWidget):
             self.dates[n] = date
 
         # Set data for curve of balance and drawdown
-        self.balance_curve.setData(df["balance"])
-        self.drawdown_curve.setData(df["drawdown"])
+        self.balance_curve.setData(df["balance"].values)
+        self.drawdown_curve.setData(df["drawdown"].values)
 
         # Set data for daily pnl bar
         profit_pnl_x: list = []
